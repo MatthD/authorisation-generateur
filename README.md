@@ -1,23 +1,18 @@
-# NativeScript-Vue Application
+# Generateur d'authorisation de sortie
 
-> A native application built with NativeScript-Vue
+> Parce que le confinement c'est pas simple
+> Parce que quand tu sort 4 fois ton chiens par jours
+> Parce que c'est super relou de devoir retaper sur le site officiel toutes les infos et selectionner la date et l'heure et s'envoyer sur son smartphone
 
-## Usage
+# Release (android)
 
-``` bash
-# Install dependencies
-npm install
+Télécharger la dernier release pour [android](https://github.com/MatthD/authorisation-generateur/releases/download/1.0.0/autogenerator-sortie.apk)
 
-# Preview on device
-tns preview
+## utilisation
 
-# Build, watch for changes and run the application
-tns run
+1. Remplir toutes vos informations perso dans la partie mes infos (*une seule fois*)
+2. Choisissez un motif dans la magnifique liste
 
-# Build, watch for changes and debug the application
-tns debug <platform>
+enjoy votre PDF qui s'ouvre (il se trouve également dans `/storage/download` )
 
-# Build for production
-tns build <platform> --env.production
-
-```
+❤️Made with love in France with Nativescript, TypeScript & Vue/Vuex
