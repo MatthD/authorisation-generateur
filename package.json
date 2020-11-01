@@ -6,7 +6,6 @@
   "author": "Matthias <matthias.dieudonne@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@microexcel-csd/nativescript-create-pdf": "^1.1.1",
     "@nativescript/core": "^7.0.3",
     "@nativescript/theme": "^2.3.3",
     "@vue/devtools": "^5.3.3",
