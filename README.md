@@ -6,9 +6,11 @@
 
 # Release (android)
 
-Télécharger la dernier release pour [android](https://github.com/MatthD/authorisation-generateur/releases/download/1.0.0/autogenerator-sortie.apk)
+- Disable google play protect : Play Store -> Menu button (right top button) -> Disable the options Scan device for security threats
+- Télécharger la dernier release pour [android](https://github.com/MatthD/authorisation-generateur/releases/download/1.0.0/autogenerator-sortie.apk)
+- Accepter lors de la demande d'installation d'app non verifiée par google
 
-## utilisation
+## Utilisation
 
 1. Remplir toutes vos informations perso dans la partie mes infos (*une seule fois*)
 2. Choisissez un motif dans la magnifique liste
