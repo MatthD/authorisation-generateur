@@ -14,8 +14,10 @@ const state = {
   town: AppSettings.getString('town') ?? "",
   postalc: AppSettings.getString('postalc') ?? "",
   adress: AppSettings.getString('adress') ?? "",
-  motif: AppSettings.getString('motif') ?? "",
+  motif: "",
 };
+
+export type State = typeof state;
 
 export default new Vuex.Store({
   state,
@@ -25,11 +27,12 @@ export default new Vuex.Store({
         state[payload.field] = payload.value
       }
       if(typeof payload.value === 'string'){
+        console.log('payload', payload);
+
         AppSettings.setString(payload.field, payload.value)
         return;
       }
       if(payload.value instanceof Date){
-        console.log('payload', payload);
         AppSettings.setString(payload.field, String(payload.value))
       }
     }

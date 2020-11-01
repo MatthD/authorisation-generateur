@@ -42,7 +42,7 @@
         />
 
         <Label class="message" text="Adresse" />
-        <TextField class="input" v-model="town" hint="Adresse" />
+        <TextField class="input" v-model="adress" hint="Adresse" />
       </StackLayout>
     </ScrollView>
   </Page>
