@@ -7,8 +7,12 @@
 # Release (android)
 
 - Disable google play protect : Play Store -> Menu button (right top button) -> Disable the options Scan device for security threats
-- Télécharger la dernier release pour [android](https://github.com/MatthD/authorisation-generateur/releases/download/1.0.0/autogenerator-sortie.apk)
+- Télécharger la dernier release pour [android](https://github.com/MatthD/authorisation-generateur/releases/download/1.0.1/go-out-1.0.1.apk)
 - Accepter lors de la demande d'installation d'app non verifiée par google
+
+![demo](02.png)
+![demo](01.png)
+![demo](03.png)
 
 ## Utilisation
 

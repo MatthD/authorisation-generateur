@@ -16,8 +16,10 @@ permission.requestPermission([
   "android.permission.WRITE_EXTERNAL_STORAGE",
 ], "Autorisation d'enregistrer les pdf")
 .then(function (res) {
+  console.log('authorised');
 })
-.catch(function () {
+.catch(function (err) {
+  console.log(err);
 });
 
 new Vue({

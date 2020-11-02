@@ -80,7 +80,6 @@ export default {
 };
 
 function updateFieldString(fieldName: string, value: string) {
-  console.log("pass here", fieldName, value);
   store.commit("updateField", {
     field: fieldName,
     value,

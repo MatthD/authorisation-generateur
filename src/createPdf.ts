@@ -1,6 +1,5 @@
 import * as fs from "tns-core-modules/file-system";
-import { File, Folder, path, knownFolders } from "tns-core-modules/file-system";
-import * as ImageSourceModule from "tns-core-modules/image-source/";
+import { File, Folder } from "tns-core-modules/file-system";
 import { openFile } from "tns-core-modules/utils/utils";
 import * as pdfMake from "pdfmake/build/pdfmake.js";
 import { State } from "./store";
@@ -18,7 +17,6 @@ export class FileReaderService {
 
   readJSON(path: string): Promise<Object> {
     let jsonFile = documents.getFile(path);
-    console.log("jsonfile", jsonFile);
     return new Promise<Object>((resolve, reject) => {
       jsonFile
         .readText()
@@ -44,9 +42,6 @@ export enum Choose {
 const f = new FileReaderService();
 
 export function generatePdf(choose: Choose, userInfos: State) {
-  if (choose === Choose.Balade) {
-    console.log("choose", userInfos);
-  }
 
   const docDefinition = {
     content: [
@@ -144,9 +139,7 @@ function returnAllChoices(choose: Choose) {
     ECOLE:
       "Déplacement pour chercher les enfants à l’école et à l’occasion de leurs activités",
   };
-  console.log('pass here')
   return Object.keys(possibilities).map((key) => {
-    console.log(key === choose)
     return {
       columns: [
         {
