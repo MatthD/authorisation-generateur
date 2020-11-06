@@ -27,8 +27,6 @@ export default new Vuex.Store({
         state[payload.field] = payload.value
       }
       if(typeof payload.value === 'string'){
-        console.log('payload', payload);
-
         AppSettings.setString(payload.field, payload.value)
         return;
       }

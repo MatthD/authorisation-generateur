@@ -41,21 +41,21 @@ export enum Choose {
 
 const f = new FileReaderService();
 
-export function generatePdf(choose: Choose, userInfos: State) {
+export function generatePdf(choose: Choose, userInfos: State, currentTown=null) {
 
   const docDefinition = {
     content: [
       { text: "ATTESTATION DE DÉPLACEMENT DÉROGATOIRE", style: "header" },
       "En application du décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence s\nanitaire\n",
       "Je soussigné(e),\n\n",
-      `Mme/M. : ${userInfos.name}\n\n`,
+      `Mme/M. : ${userInfos.name} ${userInfos.lastname}\n\n`,
       `Né(e) le : ${getFrenchDate(userInfos.dob)} ${userInfos.tob}\n\n`,
       `Demeurant : ${userInfos.adress} ${userInfos.postalc} ${userInfos.town}\n\n`,
       "certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par le décret n°2020-1310 du 29 octobre 2020 prescrivant les mesures générales nécessaires pour faire face à l'épidémie de Covid19 dans le cadre de l'état d'urgence sanitaire\n\n",
-      `Fait à : ${userInfos.town}\n\n`,
       returnAllChoices(choose),
+      `Fait à : ${currentTown || userInfos.town}\n\n`,
       `Le : ${getFrenchDate()} à ${getFrenchTime()}\n\n`,
-      `Signature: ${userInfos.name} ${userInfos.lastname[0].toUpperCase()}`
+      `Signature: ${userInfos.name[0].toUpperCase()} ${userInfos.lastname[0].toUpperCase()}`
     ],
     styles: {
       header: {
@@ -110,7 +110,7 @@ function savePdf(dataUrl: string) {
 }
 
 function getFrenchDate(date: Date = new Date()) {
-  return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+  return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
 }
 
 function getFrenchTime(date: Date = new Date()) {
